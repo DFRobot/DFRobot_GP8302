@@ -40,7 +40,11 @@
 
 
  DFRobot_GP8302::DFRobot_GP8302()
-   :_digital(0), _scl(SCL), _sda(SDA), _twiaddr(GP8302_DEF_I2C_ADDR),_calibration(false){}
+  #if defined(PIN_WIRE_SCL) && defined(PIN_WIRE_SDA)
+    :_digital(0), _scl(PIN_WIRE_SCL), _sda(PIN_WIRE_SDA), _twiaddr(GP8302_DEF_I2C_ADDR),_calibration(false){}
+  #else
+    :_digital(0), _scl(SCL), _sda(SDA), _twiaddr(GP8302_DEF_I2C_ADDR),_calibration(false){}
+  #endif
 
 uint8_t DFRobot_GP8302::begin(int scl, int sda){
   if(scl >= 0) _scl = scl;
