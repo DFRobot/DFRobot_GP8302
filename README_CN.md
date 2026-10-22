@@ -103,6 +103,7 @@ FireBeetle M0      |      √       |              |             |
 ## 历史
 
 - 2022/03/03 - 1.0.0 版本
+- 2026/10/22 - 1.0.1 版本，板子定义了 PIN_WIRE_SCL/PIN_WIRE_SDA 时优先用作默认引脚（修复 Arduino Nano 33 BLE 编译失败）
 
 ## 创作者
 

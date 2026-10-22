@@ -102,6 +102,7 @@ FireBeetle M0      |      √       |              |             |
 ## History
 
 - 2022/03/03 - Version 1.0.0 released.
+- 2026/10/22 - Version 1.0.1 released. Use PIN_WIRE_SCL/PIN_WIRE_SDA as the default pins when the board defines them (fixes build on Arduino Nano 33 BLE).
 
 ## Credits
 
